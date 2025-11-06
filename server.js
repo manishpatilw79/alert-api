@@ -5,10 +5,10 @@ const app = express();
 app.use(express.json());
 
 // 🔹 Twilio credentials (इथे तुझे actual values टाक)
-const accountSid = process.env.AC07b67072c61ca1651793c18c0a990a10;
-const authToken = process.env.20ad8376968010d468c1c11a85ba4b3b;
-const fromNumber = process.env.+12626841904;
-const toNumber = process.env.+917028217782;
+const accountSid = process.env.TWILIO_ACCOUNT_SID;
+const authToken = process.env.TWILIO_AUTH_TOKEN;
+const fromNumber = process.env.TWILIO_FROM;
+const toNumber = process.env.TWILIO_TO;
 
 app.post("/alert", async (req, res) => {
   try {
